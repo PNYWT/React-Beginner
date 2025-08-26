@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./App.css";
 
-function App() {
+function BasicUseState() {
   // MARK: Basic useState
   const [count, setCount] = useState(0);
 
@@ -64,7 +63,7 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className="container">
       {/* MARK: Basic useState */}
       <div className="grid grid-cols-1 bg-amber-500 gap-5 p-4">
         <div className="flex justify-center gap-4">
@@ -82,19 +81,22 @@ function App() {
             +
           </button>
         </div>
-        <div>
-          <input
-            type="number"
-            className="border-2 border-black"
-            value={step}
-            onChange={(e) => {
-              const newStep = parseInt(e.target.value);
-              setStep(newStep);
-              setCount(newStep);
-            }}
-          />
+        <div className="flex justify-center">
+          <label className="flex gap-2">
+            Step:
+            <input
+              type="number"
+              className="border-2 border-black"
+              value={step}
+              onChange={(e) => {
+                const newStep = parseInt(e.target.value);
+                setStep(newStep);
+                setCount(newStep);
+              }}
+            />
+          </label>
         </div>
-        <div>
+        <div className="flex justify-center">
           <button
             className="bg-green-500 text-white px-4 py-2 rounded"
             onClick={() => onTapIncrementTwice()}
@@ -104,8 +106,8 @@ function App() {
         </div>
       </div>
       {/* MARK: Array useState */}
-      <div className="grid grid-cols-1 justify-center bg-red-500 gap-5 p-4">
-        <div className="flex justify-start items-center gap-4">
+      <div className="container bg-red-500 grid grid-cols-1">
+        <div className="flex justify-start items-center gap-4 m-4">
           <h3>Array and object</h3>
           <button
             className="bg-green-500 text-white px-4 py-2 rounded"
@@ -153,4 +155,4 @@ function App() {
   );
 }
 
-export default App;
+export default BasicUseState;
