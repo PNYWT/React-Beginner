@@ -66,6 +66,7 @@ function BasicUseState() {
     <div className="container">
       {/* MARK: Basic useState */}
       <div className="grid grid-cols-1 bg-amber-500 gap-5 p-4">
+        <h1>useState</h1>
         <div className="flex justify-center gap-4">
           <h1>Count: {count}</h1>
           <button

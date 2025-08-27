@@ -37,7 +37,7 @@ function BasicUseEffect() {
   return (
     <div className="container">
       <div className="flex flex-col justify-center items-center gap-4">
-        <h1 className="text-gray-700">useEffect Hook</h1>
+        <h1 className="text-gray-700">useEffect</h1>
         <button onClick={incrementCount}>Increment: {count}</button>
         <button onClick={updateAnotherValue}>
           AnotherValue: {anotherValue}
